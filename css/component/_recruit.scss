@@ -1,0 +1,93 @@
+@use "../setting/setting";
+
+.c-recruit{
+  background: setting.$color-main;
+  padding: 48px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url(../images/recruit/logo-recruit.png)no-repeat center center/cover;
+    height: 200px;
+    width: 240px;
+    top: 0;
+    right: -80px;
+    z-index: 1;
+  }
+}
+
+.c-recruit__contents{
+  position: relative;
+  z-index: 2;
+}
+.c-recruit__heading{
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+}
+
+.c-recruit__texts{
+  color: #fff;
+  margin-top: 16px;
+
+  p{
+    margin-top: 8px;
+  }
+}
+
+/*================================
+	Tab以上
+=================================*/
+@media (min-width: 768px){
+  .c-recruit{
+    &::before {
+      width: 400px;
+      height: 360px;
+    }
+  }
+  .c-recruit__contents{
+    width: 60%;
+  }
+}
+
+/*================================
+	PC
+=================================*/
+@media (min-width: 1024px){
+  .c-recruit{
+    padding: 88px 0;
+
+    &::before {
+      top: 0;
+      right: 0;
+      height: 500px;
+      width: 560px;
+    }
+  }
+
+  .c-recruit__contents{
+    width: 58%;
+    max-width: 560px;
+  }
+
+  .c-recruit__heading{
+    span{
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h2{
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .c-recruit__texts{
+    font-size: 18px;
+    margin-top: 24px;
+  }
+}

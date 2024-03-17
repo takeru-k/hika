@@ -1,0 +1,68 @@
+@use "../setting/setting";
+
+.c-cta{
+  background: #F5F8F9;
+  padding: 48px 0;
+}
+
+.c-cta__contents{
+  max-width: 640px;
+  margin: 0 auto;
+  
+  p{
+    padding-top: 16px;
+  }
+}
+
+.c-cta__button{
+  a{
+    color: #333;
+    text-align: center;
+    color: #fff;
+    background: setting.$color-main;
+    padding: 12px 16px;
+    letter-spacing: 1.6px;
+    margin: 24px auto 0;
+    font-weight: bold;
+    display: block;
+    transition: .4s;
+    position: relative;
+
+    &:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    background: url('../images/icon-arrow-white.svg') no-repeat;
+    background-size:cover;   
+    height: 16px;
+    width: 16px;
+    }
+
+    @media (min-width: 768px){
+      width: 200px;
+    }
+
+    &:hover{
+      background: setting.$color-accent;    }
+  }
+}
+
+@media (min-width: 768px){
+  .c-cta{
+    padding: 64px 0;
+  }
+
+  .c-cta__contents{
+    text-align: center;
+
+    h2{
+      font-size: 32px;
+    }
+  }
+
+  .c-cta__button{
+    margin-top: 40px;
+  }
+}

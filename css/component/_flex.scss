@@ -1,0 +1,55 @@
+
+.c-flex__heading{
+  h2{
+    font-size: 20px;
+  }
+}
+
+@media not all and (min-width: 768px){
+  .c-flex__item + .c-flex__item{
+    padding-top: 24px;
+  }
+}
+
+
+@media (min-width: 768px){
+  .c-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .c-flex__item{
+    width: 48%;
+
+    img{
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .c-flex__item{
+    width: 44%;
+  }
+
+  .c-flex__img{
+    width: 50%;
+  }
+
+
+.c-flex__heading{
+  h2{
+    font-size: 24px;
+  }
+}
+}
+
+.-reverse{
+  flex-direction: row-reverse;
+}
+
+.-alignCenter{
+  align-items: center;
+}

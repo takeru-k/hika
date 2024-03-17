@@ -1,0 +1,35 @@
+@use "../setting/setting";
+
+.l-pageHeader{
+  background: setting.$color-sub;
+  text-align: center;
+  padding: 24px 0;
+  color: setting.$color-main;
+
+  span{
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  h1{
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 1024px){
+  .l-pageHeader{
+    padding: 40px 0;
+
+    span{
+      font-size: 44px;
+    }
+
+    h1{
+      font-size: 24px;
+    }
+  }
+}
+

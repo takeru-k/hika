@@ -1,0 +1,89 @@
+@use "../setting/setting";
+
+.c-button{
+  color: #fff;
+  text-align: center;
+  background: setting.$color-main;
+  padding: 16px 16px;
+  letter-spacing: 1.6px;
+  display: block;
+  transition: .4s;
+  position: relative;
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 2rem;
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+    &:hover{
+      opacity: .7;
+    }
+
+    &:hover:after{
+      right: 1.4rem;
+    }
+  }
+
+
+
+
+@media (min-width: 768px){
+  .c-button{
+    width: 240px;
+  }
+}
+
+.c-button__white{
+  color: setting.$color-main;
+  background: #fff;
+  border: 2px solid setting.$color-main;
+
+  &:hover{
+    color: #fff;
+    background: #2cc6de;
+    opacity: 1;
+    border: 2px solid #fff;
+  }
+}
+
+
+.c-button__more{
+  margin-top: 40px;
+}
+
+.c-button__center{
+  a{
+    margin: 40px auto 0;
+  }
+}
+
+.c-button__works{
+  margin-top: 40px;
+
+  @media (min-width: 768px){
+    a{
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1024px){
+        align-self: center;
+
+    a{
+      margin: 0 0;
+    }
+  }
+}

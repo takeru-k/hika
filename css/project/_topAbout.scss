@@ -1,0 +1,153 @@
+@use "../setting/setting";
+
+/* 全体の余白
+-------------------------*/
+.p-topAbout{
+  padding: 48px 0;
+  position: relative;
+}
+
+/* 見出し
+-------------------------*/
+.p-topAbout__heading{
+  position: relative;
+  width: 100%;
+
+  h2{
+    font-family: "Noto Serif JP", serif;
+  }
+}
+
+/* 英語のサブタイトル
+-------------------------*/
+.p-topAbout__subtitle{
+  display: flex;
+  transform: rotate( 90deg );
+  position: absolute;
+  top: 16px;
+  right: -58px;
+
+  p{
+    text-transform: capitalize;
+    color: setting.$color-main;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 8px;
+  }
+}
+
+/* ボックスのデコレーション
+-------------------------*/
+.p-topAbout__subtitle-boxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-topAbout__subtitle-box {
+  width: 8px;
+  height: 8px;
+  margin: 4px 2px 0;
+  background-color: setting.$color-main;
+}
+
+
+/* テキスト
+-------------------------*/
+.p-topAbout__texts{
+  margin-top: 24px;
+
+  p{
+    margin-top: 16px;
+  }
+}
+
+/*================================
+	Tab以上
+=================================*/
+@media (min-width: 768px){
+
+/* 背景画像
+-------------------------*/
+.p-topAbout{
+  &::before {
+    content: '';
+    position: absolute;
+    background: url(../images/top/topAbout.jpg)no-repeat center center/cover;
+    height: 100%;
+    width: 38%;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* 要素の余白調整
+-------------------------*/
+.p-topAbout__contents{
+  width: 50%;
+  margin-left: 16px;
+}
+
+.p-topAbout__contents:before{
+      content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(#fff 0%, #e7e7e7 100%);
+}
+
+/* 英語サブタイトルの位置とサイズ調整
+-------------------------*/
+.p-topAbout__subtitle{
+  left: -108px;
+  right: auto;
+  font-size: 20px;
+}
+
+}
+
+/*================================
+	PC
+=================================*/
+@media (min-width: 1024px){
+
+
+/* 全体の余白
+-------------------------*/
+.p-topAbout{
+  padding: 84px 0;
+}
+
+/* 見出し
+-------------------------*/
+.p-topAbout__heading{
+
+  h2{
+    font-size: 36px;
+  }
+}
+
+/* テキスト
+-------------------------*/
+.p-topAbout__texts{
+  margin-top: 32px;
+  p{
+    font-size: 18px;
+  }
+}
+
+/* 英語サブタイトルの位置とサイズ調整
+-------------------------*/
+.p-topAbout__subtitle{
+  left: -168px;
+  top: 64px;
+  right: auto;
+  font-size: 28px;
+}
+  
+}
